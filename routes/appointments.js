@@ -51,7 +51,7 @@ router.put('/appointments/:id', function(req, res) {
   );
 });
 
-router.delete('/appointments/:id/delete', function(req, res) {
+router.delete('/appointments/:id', function(req, res) {
   Appointment.deleteOne({ _id: req.params.id }, function(err, result) {
     if (err) res.status(500).send();
     res.send(result);
